@@ -1,0 +1,16 @@
+{
+  "name": "myblog",
+  "version": "0.1.0",
+  "description": "personal blog",
+  "main": "index.js",
+  "author": "wain",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.8.2",
+    "vuepress-theme-hope": "^1.9.6"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs --temp .temp",
+    "docs:build": "vuepress build docs"
+  }
+}
