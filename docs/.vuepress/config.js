@@ -1,26 +1,102 @@
 const { config } = require("vuepress-theme-hope");
-
+// https://mrhope.site/
 module.exports = config({
-    title: 'Wain\'s blog',
-    description: 'Just playing around',
-    themeConfig: {
-    nav:[ // 导航栏配置
-      {
-        text: '首页', link: '/' 
-      },
-      {
-        text: '生活记录', link: '/life/',
-      },
-      {
-        text: '学习笔记', link: '/notes/',
-      },
-      {
-        text: '课程报告', link: '/reports/',
-      },
+    title: 'Wain\'s blog', 
+    description: 'If you shed tears when you miss the sun, you also miss the stars.',
+    head: [ // 注入到当前页面的 HTML <head> 中的标签
+      ['link', { rel: 'icon', href: '/W.svg' }], // 增加一个自定义的网页标签的图标)
     ],
-    mdEnhance: {
-      enableAll: true,
-    },
-    sidebar: 'auto', // 侧边栏配置
+    themeConfig: {
+      logo: "/W.svg",
+      blog: {
+        avatar: "/ava2.png",
+        name: "Wain",
+      },
+    // https://vuepress-theme-hope.github.io/zh/guide/layout/navbar/#%E5%AF%BC%E8%88%AA%E6%A0%8F%E9%93%BE%E6%8E%A5
+      nav:[ // 导航栏配置
+        {
+          text: '首页', link: '/' 
+        },
+        {
+          text: '生活记录', prefix: "/life/", icon: "life",
+          items: [
+            {
+              text: "生活记录", link: "", icon: "life",
+            },
+            { 
+              text: "",
+              items: [
+                {text: "游记", link: "tour/"},
+            
+              ]
+          },
+          ],
+        },
+        {
+          text: '学习笔记', prefix: '/notes/', icon: "note",
+          items: [
+            {
+              text: '学习笔记', link: '', icon: "note",
+            },
+            { 
+              text: "",
+              items: [
+                {text: "计算机视觉", link: "cv/"},
+              ]
+          },
+          ]
+        },
+        {
+          text: '课程报告', prefix: '/reports/', icon: "paper",
+          items: [
+            {
+              text: '课程报告', link: '', icon: "paper",
+            },
+            { 
+              text: "",
+              items:[
+                {text: "数字信号处理", link: "dsp/",},
+                {text: "模式识别", link: "pr/",}
+              ] 
+            },
+          ]
+        },
+      ],
+      mdEnhance: {
+        enableAll: true,
+      },
+    // https://vuepress-theme-hope.github.io/zh/guide/layout/sidebar/#%E6%A1%88%E4%BE%8B
+      sidebar: {
+        "/life/":[
+          {
+            title: "游记",
+            prefix: "tour/",
+            collapsable: false,
+            children: ["bos", "ny"],
+          }
+        ],
+        "/notes/":[
+          {
+            title: "计算机视觉",
+            prefix: "cv/",
+            collapsable: false,
+            children: ["d2l目标检测笔记", "目标检测常用网络笔记"],
+          }
+        ],
+        "/reports/":[
+          {
+            title: "数字信号处理",
+            prefix: "dsp/",
+            collapsable: false,
+            children: ["信号的产生与采样", "fft"],
+          },
+          {
+            title: "模式识别",
+            prefix: "pr/",
+            collapsable: false,
+            children: ["ex1"],
+          }
+        ],
+      }
     },
   });
