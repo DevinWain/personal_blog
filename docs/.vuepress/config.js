@@ -42,6 +42,7 @@ module.exports = config({
               text: "",
               items: [
                 {text: "计算机视觉", link: "cv/"},
+                {text: "算法笔记", link: "algorithm/"},
               ]
           },
           ]
@@ -81,7 +82,13 @@ module.exports = config({
             prefix: "cv/",
             collapsable: false,
             children: ["d2l目标检测笔记", "目标检测常用网络笔记"],
-          }
+          },
+          {
+            title: "算法笔记",
+            prefix: "algorithm/",
+            collapsable: false,
+            children: ["Leetcode-5691"],
+          },
         ],
         "/reports/":[
           {

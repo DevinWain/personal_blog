@@ -1,3 +1,10 @@
+---
+# icon, title, prev, original, next, sticky, copyrightText, mediaLink
+category: cv
+tags: [目标检测]
+author: Wain
+time: 2021-2-17
+---
 # d2l目标检测笔记
 
 ## 边界框(Bounding Box)
