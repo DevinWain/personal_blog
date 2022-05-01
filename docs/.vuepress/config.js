@@ -48,6 +48,21 @@ module.exports = config({
           ]
         },
         {
+          text: '开发文档', prefix: '/develop/', icon: "note",
+          items: [
+            {
+              text: '开发文档', link: '', icon: "note",
+            },
+            { 
+              text: "",
+              items: [
+                {text: "Handmack-Play播放器", link: "hm-play/Handmack-Play播放器"},
+                
+              ]
+          },
+          ]
+        },
+        {
           text: '课程报告', prefix: '/reports/', icon: "paper",
           items: [
             {
@@ -89,6 +104,14 @@ module.exports = config({
             collapsable: false,
             children: ["Leetcode-5691"],
           },
+        ],
+        "/develop/":[
+          {
+            title: "开发文档",
+            prefix: "hm-play/",
+            collapsable: false,
+            children: ["Handmack-Play播放器"],
+          }
         ],
         "/reports/":[
           {
