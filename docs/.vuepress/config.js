@@ -102,7 +102,7 @@ module.exports = config({
             title: "算法笔记",
             prefix: "algorithm/",
             collapsable: false,
-            children: ["Leetcode-5691"],
+            children: ["Leetcode-5691", "Leetcode-19"],
           },
         ],
         "/develop/":[
