@@ -1,6 +1,6 @@
 ---
 # icon, title, prev, original, next, sticky, copyrightText, mediaLink
-category: 前端, 后端
+category: 后端
 tags: [开发文档]
 author: Wain
 time: 2022-4-28
