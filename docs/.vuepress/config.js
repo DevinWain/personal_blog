@@ -81,6 +81,7 @@ module.exports = config({
       ],
       mdEnhance: {
         enableAll: true,
+        tasklist: true,
       },
     // https://vuepress-theme-hope.github.io/zh/guide/layout/sidebar/#%E6%A1%88%E4%BE%8B
       sidebar: {
@@ -103,7 +104,7 @@ module.exports = config({
             title: "算法笔记",
             prefix: "algorithm/",
             collapsable: false,
-            children: ["Leetcode-5691", "Leetcode-19"],
+            children: ["Leetcode-5691", "Leetcode-19", "Leetcode-83"],
           },
         ],
         "/develop/":[
