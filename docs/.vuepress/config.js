@@ -58,6 +58,7 @@ module.exports = config({
               items: [
                 {text: "Handmack-Play播放器", link: "hm-play/Handmack-Play播放器"},
                 {text: "B测-雾霾天气查询", link: "xdu-b_test/天气查询"},
+                {text: "算法可视化——水体提取", link: "water-app/水体提取"},
                 
               ]
           },
@@ -110,9 +111,9 @@ module.exports = config({
         "/develop/":[
           {
             title: "长期大project",
-            prefix: "hm-play/",
+            // prefix: "hm-play/",
             collapsable: false,
-            children: ["Handmack-Play播放器"],
+            children: ["hm-play/Handmack-Play播放器", "water-app/水体提取"],
           },
           {
             title: "短期小项目",
